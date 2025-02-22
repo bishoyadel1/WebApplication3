@@ -40,6 +40,7 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(ob =>
 
 builder.Services.AddScoped<IProductRepository,  ProductRepository>();
 builder.Services.AddScoped<ITokenServices, TokenServices>();
+builder.Services.AddScoped<ICoursesRepository, CoursesRepository>();
 builder.Services.AddScoped<IOrderServices, OrderServices>();
 builder.Services.AddScoped<IBasketRepostiroy, BasketRepostiroy>();
 builder.Services.AddScoped (typeof(IGenericRepository<>), typeof(GenericRepository<>));

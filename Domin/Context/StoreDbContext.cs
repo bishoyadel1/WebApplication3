@@ -32,5 +32,8 @@ namespace Domin.Context
         public DbSet<Brand> Brands { get; set; }
         public DbSet<UserBasket> UserBaskets { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Trainer> Trainers { get; set; }
+        public DbSet<Payment> Payments { get; set; }
     }
 }

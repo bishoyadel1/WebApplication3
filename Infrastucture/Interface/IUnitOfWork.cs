@@ -11,6 +11,7 @@ namespace Infrastucture.Interface
     {
         public IProductRepository ProductRepository { get; set; }
         public IBasketRepostiroy BasketRepostiroy { get; set; }
+        public ICoursesRepository CoursesRepository { get; set; }
         public IOrderServices   OrderServices { get; set; }
         public ITokenServices TokenServices { get; set; }
         SignInManager<IdentityUser> signInManager { get; set; }

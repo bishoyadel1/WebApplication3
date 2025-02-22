@@ -11,7 +11,7 @@ namespace Infrastucture.Repository
     public class UnitOfWork : IUnitOfWork
     {
      
-        public UnitOfWork(IProductRepository _ProductRepository , IBasketRepostiroy _BasketRepostiroy, SignInManager<IdentityUser> _signInManager, UserManager<IdentityUser> _userManager , ITokenServices _tokenServices , IOrderServices _orderServices)
+        public UnitOfWork(IProductRepository _ProductRepository , IBasketRepostiroy _BasketRepostiroy, SignInManager<IdentityUser> _signInManager, UserManager<IdentityUser> _userManager , ITokenServices _tokenServices , IOrderServices _orderServices , ICoursesRepository _coursesRepository)
         {
             ProductRepository = _ProductRepository;
             signInManager= _signInManager;
@@ -19,7 +19,7 @@ namespace Infrastucture.Repository
             BasketRepostiroy = _BasketRepostiroy;
             TokenServices= _tokenServices;
             OrderServices = _orderServices;
-
+            CoursesRepository = _coursesRepository;
 
         }
         public IProductRepository ProductRepository { get ; set  ; }
@@ -28,5 +28,6 @@ namespace Infrastucture.Repository
         public UserManager<IdentityUser> userManager { get; set ; }
         public ITokenServices TokenServices { get ; set  ; }
         public IOrderServices  OrderServices { get  ; set ; }
+        public ICoursesRepository CoursesRepository { get ; set; }
     }
 }
